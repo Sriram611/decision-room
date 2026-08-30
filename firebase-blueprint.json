@@ -1,0 +1,33 @@
+{
+  "entities": {
+    "User": {
+      "path": "users/{userId}",
+      "fields": {
+        "uid": { "type": "string", "description": "Firebase Auth UID" },
+        "email": { "type": "string", "description": "User email" },
+        "displayName": { "type": "string", "description": "User display name" },
+        "createdAt": { "type": "string", "description": "ISO timestamp" },
+        "updatedAt": { "type": "string", "description": "ISO timestamp" }
+      }
+    },
+    "Decision": {
+      "path": "users/{userId}/decisions/{decisionId}",
+      "fields": {
+        "id": { "type": "string", "description": "Unique decision ID" },
+        "userId": { "type": "string", "description": "Owner user ID" },
+        "title": { "type": "string", "description": "Short decision headline" },
+        "encryptedPayload": { "type": "string", "description": "Client-side encrypted JSON string (AES-GCM) containing raw decision text and context" },
+        "previewSnippet": { "type": "string", "description": "Sanitized preview snippet or category tag" },
+        "status": { "type": "string", "description": "active | resolved" },
+        "chosenPersona": { "type": "string", "description": "realist | dreamer | skeptic | hybrid | null" },
+        "resolutionNote": { "type": "string", "description": "Encrypted or sanitized resolution notes" },
+        "outcome": { "type": "string", "description": "positive | mixed | regret | pending" },
+        "outcomeReflection": { "type": "string", "description": "User logged outcome reflection" },
+        "outcomeLoggedAt": { "type": "string", "description": "ISO timestamp of outcome log" },
+        "createdAt": { "type": "string", "description": "ISO timestamp" },
+        "updatedAt": { "type": "string", "description": "ISO timestamp" },
+        "turnsCount": { "type": "number", "description": "Total conversation turns" }
+      }
+    }
+  }
+}

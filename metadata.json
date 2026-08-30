@@ -1,0 +1,6 @@
+{
+  "name": "Decision Room",
+  "description": "A multi-persona AI decision debate and outcome tracking platform powered by Gemini and Firestore.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
